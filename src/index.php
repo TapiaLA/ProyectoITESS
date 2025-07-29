@@ -219,7 +219,8 @@ Escucha por qué eligieron ITESS — ya sea por sus docentes especializados en t
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WLsTzYBFb8I?si=yvsy8kD0AgHN__0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!-- VIDEO IFRAME CORREGIDO -->
+                    <iframe allowfullscreen="" class="video mx-auto" frameborder="0" src="https://www.youtube.com/embed/WLsTzYBFb8I?si=yvsy8kD0AgHN__0p" title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>

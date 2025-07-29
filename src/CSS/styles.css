@@ -202,9 +202,10 @@ body.font-xlarge { font-size: 1.2em; }
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 360px; /* Adjusted width for better mobile view */
-  max-width: 90vw; /* Responsive width */
+  width: 360px; /* Adjusted width for better desktop view */
+  max-width: calc(100vw - 40px); /* Max width to prevent overflow on small screens */
   height: 500px;
+  max-height: calc(100vh - 110px); /* Max height to prevent overflow on small screens */
   background-color: var(--chatbot-bg);
   border-radius: var(--radius); /* Using root variable */
   box-shadow: var(--chatbot-shadow);
@@ -624,12 +625,14 @@ p {
     max-width: 100%;
   }
 
-  /* Chatbot responsive adjustments */
+  /* Chatbot responsive adjustments for smaller screens */
   #chatbotWindow {
-      right: 10px;
-      bottom: 80px;
-      width: calc(100vw - 20px); /* Full width minus margin */
-      height: 70vh; /* Use percentage of viewport height */
+      right: 10px; /* Keep a small margin from the right edge */
+      bottom: 80px; /* Adjust bottom to not overlap with chatbot button */
+      width: calc(100vw - 20px); /* Full width minus margin on both sides */
+      height: 70vh; /* Use percentage of viewport height for better adaptability */
+      max-width: none; /* Remove fixed max-width for smaller screens */
+      max-height: none; /* Remove fixed max-height for smaller screens */
   }
 }
 
@@ -1389,7 +1392,7 @@ body.dark-mode .professor-contact a {
 
 .footer-divider {
   border-color: rgba(255, 255, 255, 0.1);
-  margin-top: 0rem;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
 
