@@ -13,7 +13,7 @@
             <!-- Columna 1: Logo y Redes Sociales -->
             <div class="col-lg-4 mb-4">
                 <img src="/img/Asset 11@300x.png" alt="Logo ITESS" class="footer-logo mb-3">
-                <p class="footer-text">Proyecto de investigación sobre tecnologías de la información y comunicación.</p>
+                <p class="footer-text">Verano Científico CENEDIT TECNM 2025.</p>
                 <div class="social-icons">
                     <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
@@ -51,7 +51,7 @@
             <!-- Columna 4: Newsletter y Enlaces Legales -->
             <div class="col-lg-3 col-md-4 mb-4">
                 <h5 class="footer-title">Newsletter</h5>
-                <p class="footer-text">Suscríbete para recibir actualizaciones sobre nuestra investigación.</p>
+                <p class="footer-text">Suscríbete para recibir informacion relevante de la carrera.</p>
                 <form class="footer-form">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Tu email" required>
