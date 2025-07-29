@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing TIC - ITESS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Paleta de colores y variables */
+    :root {
+      --primary: #0046b8;
+      --secondary: #00a99d;
+      --light-bg: #f5f5f5;
+      --card-bg: #ffffff;
+      --form-bg: #CCCCBE;
+      --text-main: #333333;
+      --radius: 12px;
+      --gap: 24px;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body { background: var(--light-bg); color: var(--text-main); line-height: 1.5; }
+    .container { max-width: 1200px; margin: 0 auto; padding: var(--gap); }
+    .seccion { padding: var(--gap) 0; }
+    .seccion:nth-child(even) { background: #fff; }
+    .flex { display: flex; gap: var(--gap); }
+    .flex-center { display: flex; align-items: center; justify-content: center; }
+    .center { text-align: center; }
+    h2 { font-size: 28px; margin-bottom: 16px; color: var(--primary); }
+    p { margin-bottom: 16px; }
+    .button {
+      display: inline-block; background: var(--primary); color: #fff;
+      border: none; border-radius: var(--radius);
+      padding: 12px 24px; font-size: 16px; font-weight: 600;
+      text-decoration: none; transition: background 0.3s;
+      cursor: pointer;
+    }
+    .button:hover { background: #003a9e; }
+    .bg-title {
+      background: var(--secondary); color: #fff;
+      font-weight: 700; padding: 16px 24px;
+      border-radius: var(--radius); display: inline-block;
+      margin-bottom: 16px; font-size: 20px;
+    }
+    .video {
+      width: 100%; max-width: 458px; aspect-ratio: 458/589;
+      border-radius: var(--radius); overflow: hidden;
+    }
+    img.responsive { width: 100%; height: auto; border-radius: var(--radius); }
+    /* Tarjetas generales */
+    .card { background: var(--card-bg); border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;
+    }
+    .card img { width: 100%; display: block; }
+    .card-content { padding: 12px; }
+    .card-content p { font-size: 14px; height: 47px; overflow: hidden; margin-bottom: 8px; }
+    .card-content .button { padding: 6px 12px; font-size: 12px; }
+    /* Sección 4 - Programas */
+    .programas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--gap);
+      margin-top: 24px;
+    }
+    .programa-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex; align-items: center;
+    }
+    .programa-card .info {
+      padding: 16px; flex:1;
+    }
+    .programa-card .info h4 {
+      font-size: 18px; margin-bottom: 8px; color: var(--primary);
+    }
+    .programa-card .info p {
+      font-size: 14px; color: var(--text-main);
+    }
+    /* Formulario */
+    .formulario {
+      background: var(--form-bg); padding: var(--gap);
+      border-radius: 30px; max-width: 552px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .formulario h3 { margin-bottom: 16px; color: var(--primary); }
+    .formulario input, .formulario select {
+      width: 100%; padding: 10px; margin-bottom: 12px;
+      border: 1px solid #aaa; border-radius: var(--radius);
+      font-size: 14px;
+    }
+    .formulario .checkbox { display: flex; align-items: center; margin-bottom: 16px; }
+    .formulario .checkbox input { margin: 0 8px 0 0; }
+    .formulario .submit { background: var(--secondary); color: #fff;
+      padding: 12px 24px; font-size: 16px; border: none;
+      border-radius: var(--radius); cursor: pointer;
+    }
+    .formulario .submit:hover { background: #00897a; }
+    /* Responsividad */
+    @media (max-width: 992px) {
+      .flex { flex-direction: column; }
+      .video { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Sección 1 -->
+    <section class="seccion flex">
+      <div style="flex:1;">
+        <p style="font-size:24px; font-weight:700;">"Estudiantes de todas partes del mundo llegan al Instituto Tecnológico Superior de Salvatierra..."</p>
+        <button class="button" style="margin-top:16px;">Acerca de mi...</button>
+        <p style="margin-top:12px; font-size:16px;"><strong>Francisco Javier Montecillo Puentes</strong><br>Doctor en Electrónica y profesor en ITESS en la carrera de TIC.</p>
+      </div>
+      <div style="flex:1;"><img src="/img/tic.webp" alt="Dr Montecillo" class="responsive"></div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section class="seccion flex-center">
+      <div style="flex:1; padding-right: var(--gap);">
+        <h2>¿Qué hace único al ITESS en la carrera de TIC?</h2>
+        <p>Descubre el mundo de la formación en TIC a través de las experiencias de nuestros estudiantes...</p>
+        <button class="button">Escucha a nuestros estudiantes</button>
+      </div>
+      <iframe class="video" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Sección 3 -->
+    <section class="seccion center">
+      <div class="bg-title">Acerca de la carrera de TIC en ITESS</div>
+      <p style="max-width:512px; margin:16px auto;">La carrera de TIC en ITESS está diseñada para formar profesionales capaces de diseñar, implementar y gestionar soluciones tecnológicas...</p>
+      <button class="button">Conozca más</button>
+    </section>
+
+    <!-- Sección 4 -->
+    <section class="seccion">
+      <div class="bg-title">Explora nuestros programas</div>
+      <div class="programas-grid">
+        <div class="programa-card">
+          <div class="info">
+            <h4>Certificados especializados en TIC</h4>
+            <p>Desarrolla competencias técnicas y habilidades prácticas en áreas como ciberseguridad, análisis de datos y más.</p>
+          </div>
+        </div>
+        <div class="programa-card">
+          <div class="info">
+            <h4>Certificados técnicos en TIC</h4>
+            <p>Explora temas específicos: redes seguras, programación avanzada e inteligencia artificial, entre otros.</p>
+          </div>
+        </div>
+        <div class="programa-card">
+          <div class="info">
+            <h4>Licenciatura en TIC</h4>
+            <p>Formación integral y flexible con énfasis en tecnologías emergentes y gestión de proyectos digitales.</p>
+          </div>
+        </div>
+        <div class="programa-card">
+          <div class="info">
+            <h4>Especialización en Tecnologías Emergentes</h4>
+            <p>Enfócate en tendencias como IoT, blockchain y desarrollo de aplicaciones avanzadas y casos reales.</p>
+          </div>
+        </div>
+        <div class="programa-card">
+          <div class="info">
+            <h4>Cursos técnicos y talleres</h4>
+            <p>Habilidades clave en semestres cortos: robótica, desarrollo de apps y metodologías ágiles.</p>
+          </div>
+        </div>
+        <div class="programa-card">
+          <div class="info">
+            <h4>Posgrados en TIC</h4>
+            <p>Adquiere conocimientos avanzados y lidera proyectos de innovación con impacto real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5 -->
+    <section class="seccion">
+      <div class="bg-title" style="margin-bottom:24px;">Últimos blogs, noticias y anuncios de la carrera de TICs en ITESS</div>
+      <div class="flex" style="overflow-x:auto;">
+        <div class="card">
+          <img src="/img/tic2.webp" alt="Blog 1">
+          <div class="card-content">
+            <p>Innovaciones en ciberseguridad 2025-2026</p>
+            <button class="button">Leer más</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/img/tic3.webp" alt="Hackathon 2025">
+          <div class="card-content">
+            <p>ITESS celebra Hackathon Nacional de IA 2025</p>
+            <button class="button">Leer más</button>
+          </div>
+        </div>
+        <!-- Más tarjetas -->
+      </div>
+    </section>
+
+    <!-- Sección 6 -->
+    <section class="seccion flex-center">
+      <div class="formulario">
+        <h3>Regístrese para que no se pierda de nada</h3>
+        <input type="text" placeholder="Nombre completo">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="tel" placeholder="Teléfono de contacto">
+        <input type="text" placeholder="Género">
+        <input type="date" placeholder="Fecha de nacimiento">
+        <div class="checkbox">
+          <input type="checkbox" id="terms">
+          <label for="terms">Usted acepta nuestros <a href="#">términos y condiciones</a></label>
+        </div>
+        <button class="button submit">Enviar</button>
+      </div>
+      <div style="flex:1; padding-left: var(--gap);">
+        <img src="/img/tic3.webp" alt="Estudiante" class="responsive">
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

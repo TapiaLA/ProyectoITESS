@@ -1,0 +1,1438 @@
+/* ==================== */
+/* =     TIPOGRAFÍA    = */
+/* ==================== */
+:root {
+  /* Light Mode Colors (Default) */
+  --primary: #0046b8;
+  --secondary: #00a99d;
+  --light-bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --form-bg: #CCCCBE;
+  --text-main: #333333;
+  --hero-bg-text: #0046b8; /* Specific for hero section h2 background */
+
+  /* Footer Colors (still needed for dark mode variables) */
+  --footer-bg-color: #007f7f; /* ITESS Green */
+  --footer-text-color: #e0e0e0; /* Default text color for footer in light mode */
+  --footer-heading-color: #ffffff;
+  --footer-link-hover-color: #f7d23e; /* Vibrant yellow */
+  --footer-button-bg: #e9ecef; /* Lighter grey for buttons */
+  --footer-button-text: #333;
+  --footer-button-hover-bg: #dee2e6; /* Slightly darker on hover */
+  --footer-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+
+  /* Chatbot Colors */
+  --chatbot-header-bg: var(--footer-bg-color); /* ITESS Green */
+  --chatbot-header-text: #ffffff;
+  --chatbot-bg: #f8f9fa; /* Light background for chat area */
+  --chatbot-user-bubble: #e0e0e0; /* Light gray for user messages */
+  --chatbot-bot-bubble: #d1ecf1; /* Light blue for bot messages (or pick another complementary) */
+  --chatbot-send-btn-bg: var(--primary); /* Blue for send button */
+  --chatbot-border-color: #cccccc;
+  --chatbot-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Chat icons links */
+.link-preview {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--card-bg);
+  border: 1px solid var(--chatbot-border-color);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 5px;
+  gap: 10px;
+  max-width: 320px;
+}
+
+.link-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.link-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.link-info strong {
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.link-info a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.link-info a:hover {
+  text-decoration: underline;
+}
+
+/* General */
+:root {
+  --radius: 12px;
+  --gap: 24px;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+  --primary: #5a94ff; /* Lighter blue for dark mode primary */
+  --secondary: #2db3a8; /* Slightly lighter secondary */
+  --light-bg: #1a1a1a; /* Dark background */
+  --card-bg: #2d2d2d; /* Darker card background */
+  --form-bg: #3c3c3c; /* Darker form background */
+  --text-main: #f0f0f0; /* Light text color */
+  --hero-bg-text: #1a1a1a; /* Dark text for hero section h2 background */
+
+  --footer-bg-color: #004d4d; /* Darker green for footer */
+  --footer-text-color: #bbbbbb; /* Default text color for footer in dark mode */
+  --footer-heading-color: #ffffff;
+  --footer-link-hover-color: #f7d23e;
+  --footer-button-bg: #4a4a4a;
+  --footer-button-text: #f0f0f0;
+  --footer-button-hover-bg: #5c5c5c;
+  --footer-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+  --chatbot-header-bg: #004d4d;
+  --chatbot-header-text: #ffffff;
+  --chatbot-bg: #2d2d2d;
+  --chatbot-user-bubble: #4a4a4a;
+  --chatbot-bot-bubble: #5a5a5a;
+  --chatbot-send-btn-bg: #5a94ff;
+  --chatbot-border-color: #444444;
+  --chatbot-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+body {
+  font-family: 'Inter', sans-serif; /* Changed font family */
+  background-color: var(--light-bg);
+  color: var(--text-main);
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+  /* Eliminado: padding-top: 70px; */
+}
+
+/* Font size adjustments */
+body.font-small { font-size: 0.9em; }
+body.font-medium { font-size: 1.0em; } /* Default */
+body.font-large { font-size: 1.1em; }
+body.font-xlarge { font-size: 1.2em; }
+
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(rgba(24, 12, 255, 0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* Specific styling for hero section h2 background to adapt to dark mode */
+.hero-section .text-center h2 {
+    background-color: var(--hero-bg-text);
+    color: white; /* Text always white for this element */
+    transition: background-color 0.3s ease;
+}
+
+/* Botón flotante del chatbot */
+#chatbotBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--chatbot-header-bg); /* ITESS Green */
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 1000;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+#chatbotBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Ventana flotante del chatbot */
+#chatbotWindow {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 360px; /* Adjusted width for better mobile view */
+  max-width: 90vw; /* Responsive width */
+  height: 500px;
+  background-color: var(--chatbot-bg);
+  border-radius: var(--radius); /* Using root variable */
+  box-shadow: var(--chatbot-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+  transform: translateY(20px); /* Initial position for animation */
+  opacity: 0; /* Hidden initially for animation */
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out, background-color 0.3s ease;
+}
+
+#chatbotWindow.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#chatHeader {
+  background-color: var(--chatbot-header-bg);
+  color: var(--chatbot-header-text);
+  padding: 15px 20px; /* Increased padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--chatbot-border-color);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#chatHeader span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--chatbot-header-text);
+  font-size: 1.5rem; /* Larger close button */
+  cursor: pointer;
+  padding: 0 5px;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px; /* Increased padding */
+  overflow-y: auto;
+  display: flex; /* Use flex for messages */
+  flex-direction: column;
+  gap: 10px; /* Space between messages */
+  background-color: var(--chatbot-bg); /* Ensure background adapts */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling for chat messages */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-messages::-webkit-scrollbar-track {
+  background: var(--light-bg); /* Adapts to dark mode */
+  border-radius: 10px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.chat-message {
+  max-width: 80%; /* Limit message bubble width */
+  padding: 10px 15px;
+  border-radius: 18px; /* More rounded bubbles */
+  line-height: 1.4;
+  word-wrap: break-word; /* Ensure long words wrap */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Subtle bubble shadow */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-message {
+  background-color: var(--chatbot-user-bubble);
+  align-self: flex-end; /* Align to the right */
+  color: var(--text-main);
+  border-bottom-right-radius: 5px; /* Flat corner on sender side */
+}
+
+.bot-message {
+  background-color: var(--chatbot-bot-bubble);
+  align-self: flex-start; /* Align to the left */
+  color: var(--text-main);
+  border-bottom-left-radius: 5px; /* Flat corner on sender side */
+}
+
+.chat-message p {
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+
+#chatInput {
+  display: flex;
+  border-top: 1px solid var(--chatbot-border-color);
+  padding: 10px;
+  background-color: var(--card-bg); /* White background for input area */
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#chatInput input {
+  flex: 1;
+  border: 1px solid var(--chatbot-border-color);
+  padding: 10px 15px;
+  border-radius: 25px; /* Pill-shaped input */
+  outline: none;
+  font-size: 0.95rem;
+  margin-right: 10px;
+  transition: border-color 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--light-bg);
+  color: var(--text-main);
+}
+
+#chatInput input:focus {
+  border-color: var(--primary); /* Highlight on focus */
+}
+
+#chatInput button {
+  width: 45px; /* Fixed width for send button */
+  height: 45px; /* Fixed height for send button */
+  background-color: var(--chatbot-send-btn-bg);
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular send button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+#chatInput button:hover {
+  background-color: #003a9e; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* ==================== */
+/* =     CONTENIDO PERSONALIZADO     = */
+/* ==================== */
+
+/* Contenedor principal */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* Secciones */
+.seccion {
+  padding: var(--gap) 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.seccion:nth-child(even) {
+  background: var(--card-bg); /* Adapts to dark mode */
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+  gap: var(--gap);
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  text-align: center;
+}
+
+/* Títulos y botones */
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: var(--primary); /* Adapts to dark mode */
+  transition: color 0.3s ease;
+}
+p {
+  margin-bottom: 16px;
+}
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.button:hover {
+  background: var(--primary); /* Use a darker shade of primary for hover */
+  filter: brightness(0.9); /* Darken on hover */
+}
+.bg-title {
+  background: var(--secondary); /* Adapts to dark mode */
+  color: #fff;
+  font-weight: 700;
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .flex {
+    flex-direction: column;
+  }
+  .video {
+    max-width: 100%;
+  }
+}
+
+/* Video y imágenes responsivas */
+.video {
+  width: 100%;
+  max-width: 458px;
+  aspect-ratio: 458/589;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Regla para las imágenes del carrusel */
+.carousel-item img {
+  object-fit: cover; /* Asegura que la imagen cubra el área, recortando si es necesario */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-height: 360px; /* Altura máxima consistente para estas imágenes */
+  height: 360px; /* Asegura una altura fija para consistencia visual */
+}
+
+/* Regla para la imagen de Oportunidades Académicas */
+#seccion-oportunidades .col-md-5 img.img-fluid {
+  object-fit: cover; /* Asegura que la imagen cubra el área, recortando si es necesario */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  max-height: 360px; /* Altura máxima para estas imágenes */
+}
+
+/* Regla para la imagen del Dr. Montecillo */
+#seccion-1 .col-md-6 img.responsive {
+  object-fit: cover; /* Asegura que la imagen cubra el área, recortando si es necesario */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  max-height: 360px; /* Altura máxima para estas imágenes */
+}
+
+/* Regla específica para la imagen en la sección del formulario */
+#seccion-formulario .col-md-6 img.responsive {
+  height: 100%; /* Hace que la imagen ocupe el 100% de la altura de su columna */
+  width: 100%; /* Asegura que tome el ancho completo de su columna */
+  object-fit: cover; /* Mantiene la proporción y cubre el área */
+  max-height: none; /* Elimina la restricción de altura máxima para que pueda estirarse */
+}
+
+
+/* Tarjetas generales */
+.card {
+  background: var(--card-bg); /* Adapts to dark mode */
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+/* Regla específica para las imágenes de las tarjetas de noticias */
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes de las tarjetas de noticias */
+  object-fit: cover; /* Asegura que la imagen cubra el área, recortando si es necesario */
+}
+
+.card-content {
+  padding: 12px;
+}
+.card-content p {
+  font-size: 14px;
+  height: 47px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.card-content .button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Sección de programas */
+.programas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+  margin-top: 24px;
+}
+.programa-card {
+  background: var(--card-bg); /* Adapts to dark mode */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.programa-card .info {
+  padding: 16px;
+  flex: 1;
+  }
+.programa-card .info h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--primary); /* Adapts to dark mode */
+  transition: color 0.3s ease;
+}
+.programa-card .info p {
+  font-size: 14px;
+  color: var(--text-main); /* Adapts to dark mode */
+  transition: color 0.3s ease;
+}
+
+/* Formulario */
+.formulario {
+  background: var(--form-bg); /* Adapts to dark mode */
+  padding: var(--gap);
+  border-radius: 30px;
+  max-width: 552px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.formulario h3 {
+  margin-bottom: 16px;
+  color: var(--primary); /* Adapts to dark mode */
+  transition: color 0.3s ease;
+}
+.formulario input,
+.formulario select,
+.formulario textarea { /* Added textarea here */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid var(--chatbot-border-color); /* Adapts to dark mode */
+  border-radius: var(--radius);
+  font-size: 14px;
+  background-color: var(--light-bg); /* Adapts to dark mode */
+  color: var(--text-main); /* Adapts to dark mode */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.formulario label { /* Added label styling for dark mode */
+    color: var(--text-main); /* Ensure labels are light in dark mode */
+    transition: color 0.3s ease;
+}
+/* Updated checkbox styling for Bootstrap form-check-inline */
+.formulario .form-check-inline {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 16px; /* Keep consistent margin */
+}
+.formulario .form-check-inline .form-check-input {
+  margin-right: 8px; /* Space between checkbox and label */
+  margin-left: 0; /* Reset default margin if any */
+  width: 20px; /* Make it square */
+  height: 20px; /* Make it square */
+  flex-shrink: 0; /* Prevent it from shrinking in flex container */
+}
+
+.formulario .submit {
+  background: var(--secondary); /* Adapts to dark mode */
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.formulario .submit:hover {
+  background: var(--secondary);
+  filter: brightness(0.9); /* Darken on hover */
+}
+
+/* Ajustes adicionales responsivos */
+@media (max-width: 768px) {
+  .btn-tic {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 1rem;
+  }
+  .hero-section .col-md-6 {
+    margin-bottom: 1rem;
+  }
+  .formulario {
+    max-width: 100%;
+  }
+
+  /* Chatbot responsive adjustments */
+  #chatbotWindow {
+      right: 10px;
+      bottom: 80px;
+      width: calc(100vw - 20px); /* Full width minus margin */
+      height: 70vh; /* Use percentage of viewport height */
+  }
+}
+
+/* Animaciones personalizadas para los botones */
+.btn-tic {
+  background-color: #002b7f; /* This dark blue might need a dark mode equivalent too */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 232px;
+  height: 74px;
+  font-size: 16px;
+  overflow: hidden;
+  /* --- Propiedades para alinear y quitar subrayado --- */
+  display: flex; /* Permite alinear contenido interno con flexbox */
+  align-items: center; /* Centra verticalmente el texto y la flecha */
+  justify-content: space-between; /* Empuja el texto a la izquierda y la flecha a la derecha */
+  text-decoration: none !important; /* Elimina el subrayado por defecto de los enlaces */
+}
+/* Dark mode adjustment for btn-tic if needed */
+body.dark-mode .btn-tic {
+    background-color: #003a9e; /* Slightly different dark blue */
+}
+/* Estilo específico para el texto dentro de .btn-tic */
+.btn-tic span {
+  color: white; /* Asegura que el color del texto sea blanco */
+  text-decoration: none !important; /* Elimina el subrayado del texto dentro del span */
+  font-size: 16px; /* Asegura el tamaño de fuente para el texto */
+}
+
+.btn-tic .ellipse {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  width: 36px;
+  height: 39px;
+  background-color: #b5f404;
+  border-radius: 50% 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%) translateX(100%);
+  transition: transform 0.3s ease;
+}
+.btn-tic:hover .ellipse {
+  transform: translateY(-50%) translateX(0);
+  right: 0;
+}
+.btn-tic .ellipse i {
+  font-size: 18px;
+  color: #002b7f;
+}
+.btn-tic {
+  transition: all 0.4s ease-in-out;
+}
+.btn-tic:hover {
+  transform: scale(1.03);
+}
+
+h2, .bg-title {
+  text-align: center;
+}
+
+section.seccion .button {
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Fix for text color in dark mode for news cards and form inputs */
+body.dark-mode .card-body p.card-text {
+    color: var(--text-main); /* Ensure text is light in dark mode */
+}
+
+body.dark-mode .formulario input::placeholder {
+    color: var(--footer-text-color); /* Lighter placeholder in dark mode */
+}
+/* Ensure general text and labels in forms are light in dark mode */
+body.dark-mode .formulario p,
+body.dark-mode .formulario label {
+    color: var(--text-main); /* Use the light text color variable */
+}
+/* New rule: Ensure paragraphs directly inside .card elements are light in dark mode */
+body.dark-mode .card > p {
+    color: var(--text-main); /* Targets direct child paragraphs of .card */
+}
+
+/* Estilos específicos para las tarjetas de curso (Movidos de cursos.php) */
+.card.h-100 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que el contenido no se desborde con el borde redondeado */
+}
+.card.h-100:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card-title {
+    color: var(--primary); /* Título de la tarjeta usa color primario */
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.card-subtitle {
+    color: var(--text-main); /* Subtítulo se adapta al modo oscuro */
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+.card-text {
+    color: var(--text-main); /* Texto de la tarjeta se adapta al modo oscuro */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+body.dark-mode .card-title {
+    color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .card-subtitle,
+body.dark-mode .card-text {
+    color: #e0e0e0; /* Texto claro explícito en modo oscuro */
+}
+/* Asegurar que el texto con la clase 'text-muted' se vea bien en modo oscuro */
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important; /* Un color claro para el texto "muted" en modo oscuro */
+}
+/* Nueva regla: Asegurar que párrafos y h3 dentro de la tarjeta principal sean claros en modo oscuro */
+body.dark-mode .card p,
+body.dark-mode .card h3 {
+    color: var(--text-main); /* Usar la variable --text-main que es clara en dark mode */
+}
+
+/* Estilos específicos para la tabla de horarios (Movidos de horarios.php) */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen a la tabla */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.table {
+    margin-bottom: 0; /* Eliminar margen inferior predeterminado de Bootstrap */
+    background-color: var(--card-bg) !important; /* Asegura que el fondo de la tabla se adapte */
+    color: var(--text-main); /* Asegura que el texto de la tabla se adapte */
+}
+.table thead {
+    background-color: var(--primary);
+    color: white;
+}
+.table th {
+    font-weight: 600;
+    padding: 15px;
+    border-bottom: none; /* Eliminar borde inferior del encabezado */
+    color: white !important; /* Forzar el color blanco para los títulos en modo oscuro */
+}
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+.table tbody tr:nth-child(even) {
+    background-color: var(--light-bg); /* Alternar colores de fila */
+}
+.table tbody tr:hover {
+    background-color: rgba(var(--primary-rgb), 0.1); /* Efecto hover sutil */
+}
+.table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    color: var(--text-main); /* Asegurar color de texto */
+}
+/* Adaptación a modo oscuro para la tabla */
+body.dark-mode .table-responsive {
+    background-color: var(--card-bg) !important; /* Asegura que el contenedor de la tabla sea oscuro */
+}
+body.dark-mode .table {
+    background-color: var(--card-bg) !important; /* Fondo de la tabla en dark mode */
+    color: var(--text-main) !important; /* Texto de la tabla en dark mode */
+}
+body.dark-mode .table thead {
+    background-color: var(--primary) !important; /* Usar el primary de dark mode */
+}
+body.dark-mode .table thead th {
+    color: white !important; /* Forzar el color blanco para los títulos del encabezado en dark mode */
+}
+body.dark-mode .table tbody tr:nth-child(even) {
+    background-color: #333333 !important; /* Fondo más oscuro para filas pares */
+}
+body.dark-mode .table tbody tr:nth-child(odd) {
+    background-color: #2d2d2d !important; /* Fondo oscuro para filas impares */
+}
+body.dark-mode .table tbody tr:hover {
+    background-color: rgba(var(--primary-rgb), 0.2) !important; /* Efecto hover en dark mode */
+}
+body.dark-mode .table td {
+    color: var(--text-main) !important; /* Texto claro en dark mode */
+}
+
+
+/* Estilos específicos para la lista de información (Movidos de info-landing.php) */
+.list-group-item {
+    background-color: var(--card-bg); /* Se adapta al modo oscuro */
+    color: var(--text-main); /* Se adapta al modo oscuro */
+    border-color: var(--chatbot-border-color); /* Borde que se adapta al modo oscuro */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.list-group-item strong {
+    color: var(--primary); /* Títulos en la lista usan color primario */
+}
+body.dark-mode .list-group-item strong {
+    color: var(--primary); /* Asegurar color primario en dark mode */
+}
+
+/* Estilos específicos para las listas de cursos en el kardex (Movidos de kardex.php) */
+.list-group-item {
+    background-color: var(--card-bg); /* Se adapta al modo oscuro */
+    color: var(--text-main); /* Se adapta al modo oscuro */
+    border-color: var(--chatbot-border-color); /* Borde que se adapta al modo oscuro */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.list-group-item span {
+    color: var(--text-main); /* Asegurar que el texto dentro del span se adapte */
+}
+.list-group-item .badge {
+    font-size: 0.8em;
+    padding: 0.5em 0.7em;
+    border-radius: 0.5em;
+}
+body.dark-mode .list-group-item {
+    background-color: var(--card-bg); /* Fondo de tarjeta en dark mode */
+    border-color: #444; /* Borde más oscuro */
+}
+body.dark-mode .list-group-item span {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+body.dark-mode .list-group-item .badge {
+    color: #ffffff; /* Asegurar texto blanco en badges en dark mode */
+}
+
+/* Estilos específicos para las tarjetas de materia (Movidos de materias.php) */
+.card.h-100 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card.h-100:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card-title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.card-subtitle {
+    color: var(--text-main);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+.card-text {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+body.dark-mode .card-title {
+    color: var(--primary);
+}
+body.dark-mode .card-subtitle,
+body.dark-mode .card-text {
+    color: #e0e0e0;
+}
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+body.dark-mode .card p,
+body.dark-mode .card h3 {
+    color: var(--text-main);
+}
+
+/* Estilos específicos para la lista de programas (Movidos de oferta-educativa.php) */
+.list-group-item {
+    background-color: var(--card-bg); /* Se adapta al modo oscuro */
+    color: var(--text-main); /* Se adapta al modo oscuro */
+    border-color: var(--chatbot-border-color); /* Borde que se adapta al modo oscuro */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    padding: 15px 20px; /* Más padding */
+    font-size: 1.05rem; /* Fuente ligeramente más grande */
+}
+.list-group-item:hover {
+    background-color: var(--light-bg); /* Efecto hover */
+}
+body.dark-mode .list-group-item {
+    background-color: var(--card-bg); /* Fondo de tarjeta en dark mode */
+    border-color: #444; /* Borde más oscuro */
+}
+body.dark-mode .list-group-item:hover {
+    background-color: #3a3a3a; /* Efecto hover en dark mode */
+}
+
+/* Estilos específicos para la sección de perfil (Movidos de perfil.php) */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+.profile-email {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    opacity: 0.8;
+}
+.profile-info .row {
+    margin-bottom: 15px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--chatbot-border-color); /* Línea divisoria adaptable */
+}
+.profile-info .row:last-child {
+    border-bottom: none;
+}
+.profile-info .col-md-4 {
+    font-weight: 600;
+    color: var(--primary); /* Etiquetas con color primario */
+}
+.profile-info .col-md-8 {
+    color: var(--text-main); /* Valores con color de texto principal */
+}
+/* Adaptación a modo oscuro */
+body.dark-mode .profile-avatar {
+    border-color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .profile-name {
+    color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .profile-email {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+body.dark-mode .profile-info .col-md-4 {
+    color: var(--primary); /* Etiquetas con color primario en dark mode */
+}
+body.dark-mode .profile-info .col-md-8 {
+    color: var(--text-main); /* Valores con texto claro en dark mode */
+}
+body.dark-mode .profile-info .row {
+    border-color: #444; /* Borde más oscuro en dark mode */
+}
+
+/* Estilos específicos para la sección de documentación (Movidos de documentacion.php) */
+.documentation-section h2, .documentation-section h3 {
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.documentation-section p, .documentation-section ul, .documentation-section ol {
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.documentation-section ul, .documentation-section ol {
+    margin-left: 20px;
+    padding-left: 0;
+}
+.documentation-section ul li, .documentation-section ol li {
+    margin-bottom: 0.5rem;
+}
+/* Adaptación a modo oscuro */
+body.dark-mode .documentation-section h2,
+body.dark-mode .documentation-section h3 {
+    color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .documentation-section p,
+body.dark-mode .documentation-section ul li,
+body.dark-mode .documentation-section ol li {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+
+/* Estilos específicos si son necesarios para aviso-privacidad.php (Movidos de aviso-privacidad.php) */
+.privacy-section h2, .privacy-section h3 {
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.privacy-section p, .privacy-section ul {
+    color: var(--text-main);
+    line-height: 1.6;
+}
+.privacy-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.privacy-section ul li {
+    margin-bottom: 0.5rem;
+}
+/* Adaptación a modo oscuro */
+body.dark-mode .privacy-section h2,
+body.dark-mode .privacy-section h3 {
+    color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .privacy-section p,
+body.dark-mode .privacy-section ul li {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+
+/* Estilos específicos para la página de login */
+.login-card {
+    max-width: 450px;
+    margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--card-bg); /* Se adapta al modo oscuro */
+    transition: background-color 0.3s ease;
+}
+.login-card .card-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.login-card .card-body {
+    padding: 30px;
+}
+.login-card .form-label {
+    color: var(--text-main); /* Se adapta al modo oscuro */
+    transition: color 0.3s ease;
+}
+.login-card .form-control {
+    background-color: var(--light-bg); /* Se adapta al modo oscuro */
+    color: var(--text-main); /* Se adapta al modo oscuro */
+    border-color: var(--chatbot-border-color); /* Se adapta al modo oscuro */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.login-card .form-check-label {
+    color: var(--text-main); /* Se adapta al modo oscuro */
+    transition: color 0.3s ease;
+}
+.login-card .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.login-card .btn-primary:hover {
+    background-color: #003a9e; /* Un tono más oscuro del primario */
+    border-color: #003a9e;
+}
+body.dark-mode .login-card .card-header {
+    background-color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .login-card .form-label,
+body.dark-mode .login-card .form-check-label {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+body.dark-mode .login-card .form-control {
+    background-color: #3c3c3c; /* Fondo oscuro para inputs */
+    border-color: #555; /* Borde más oscuro */
+    color: var(--text-main); /* Texto claro */
+}
+body.dark-mode .login-card a {
+    color: var(--primary); /* Enlaces con color primario en dark mode */
+}
+
+/* Estilos específicos si son necesarios para licencia-del-proyecto.php */
+.license-section h2, .license-section h3 {
+    color: var(--primary);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.license-section p, .license-section ul, .license-section ol, .license-section pre {
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.license-section pre {
+    background-color: var(--light-bg);
+    border: 1px solid var(--chatbot-border-color);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-x: auto; /* Permite scroll horizontal si el código es muy largo */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    color: var(--text-main);
+}
+/* Adaptación a modo oscuro */
+body.dark-mode .license-section h2,
+body.dark-mode .license-section h3 {
+    color: var(--primary); /* Asegurar color primario en dark mode */
+}
+body.dark-mode .license-section p,
+body.dark-mode .license-section ul li,
+body.dark-mode .license-section ol li {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+body.dark-mode .license-section pre {
+    background-color: #1f1f1f; /* Fondo más oscuro para el bloque de código */
+    border-color: #444; /* Borde más oscuro */
+    color: #e0e0e0; /* Texto claro para el código */
+}
+
+/* Estilos específicos para las tarjetas de profesor (Movidos de profesores.php) */
+.professor-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+.professor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.professor-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+.professor-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+.professor-specialty {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+.professor-description {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.6;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+}
+.professor-contact {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+.professor-contact a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.professor-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación a modo oscuro */
+body.dark-mode .professor-card {
+    background-color: var(--card-bg); /* Fondo de tarjeta en dark mode */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+body.dark-mode .professor-img {
+    border-color: var(--primary); /* Borde de imagen en dark mode */
+}
+body.dark-mode .professor-name {
+    color: var(--primary); /* Nombre en dark mode */
+}
+body.dark-mode .professor-specialty {
+    color: var(--secondary); /* Especialidad en dark mode */
+}
+body.dark-mode .professor-description,
+body.dark-mode .professor-contact {
+    color: var(--text-main); /* Texto claro en dark mode */
+}
+body.dark-mode .professor-contact a {
+    color: var(--primary); /* Enlace en dark mode */
+}
+
+/* Footer Styles */
+.footer-dark {
+  position: relative;
+  overflow: hidden;
+  background-color: #001c48; /* Fallback color if video doesn't load */
+  color: rgba(255, 255, 255, 0.9); /* Increased opacity for general text */
+  padding-top: 1rem; /* Adjusted to control height */
+  padding-bottom: 0.5rem; /* Adjusted to control height */
+  z-index: 1; /* Ensure it's above other content if necessary */
+}
+
+.footer-dark video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2; /* Changed z-index to be behind the overlay */
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover; /* Ensures video covers the area without distortion */
+  opacity: 0.7; /* Increased opacity for better visibility of video */
+}
+
+.footer-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Reduced overlay opacity to make video more visible */
+  z-index: -1;
+}
+
+.footer-dark .container {
+  position: relative;
+  z-index: 3; /* Ensure content is above overlay and video */
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-title {
+  color: var(--footer-heading-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer-text {
+  color: white; /* Explicitly white for better contrast on dark background */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  color: white !important; /* Explicitly white for better contrast */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+  display: block; /* Ensure it takes full width for padding-left animation */
+  margin-bottom: 0.7rem;
+}
+
+.footer-link::before {
+  content: '→';
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: var(--footer-link-hover-color); /* Use variable for consistency */
+}
+
+.footer-link:hover {
+  color: var(--footer-link-hover-color) !important; /* Use variable for consistency */
+  padding-left: 15px;
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+/* Contacto */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  color: white; /* Explicitly white for better contrast */
+}
+
+.contact-icon {
+  color: var(--footer-link-hover-color); /* Use variable for consistency */
+  margin-right: 10px;
+  margin-top: 3px;
+  min-width: 16px;
+}
+
+/* Social Icons in Footer */
+.footer-dark .social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-top: 1rem; /* Space below the text */
+    justify-content: flex-start; /* Align to the left */
+}
+
+.footer-dark .social-icon {
+    color: white; /* Icon color */
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly visible background */
+    width: 40px; /* Larger size */
+    height: 40px; /* Larger size */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem; /* Larger icon size */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-dark .social-icon:hover {
+    background-color: var(--footer-link-hover-color); /* Hover background color */
+    color: #333; /* Dark text on hover */
+    transform: translateY(-3px) scale(1.05); /* Subtle lift and grow effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
+.footer-form .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.footer-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--footer-link-hover-color);
+  box-shadow: none;
+}
+
+.footer-form .btn-primary {
+  background-color: var(--footer-link-hover-color);
+  border-color: var(--footer-link-hover-color);
+  color: var(--text-main); /* Text color for the button */
+}
+
+.footer-form .btn-primary:hover {
+  background-color: darken(var(--footer-link-hover-color), 10%); /* Darken on hover */
+  border-color: darken(var(--footer-link-hover-color), 10%);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7); /* Slightly brighter copyright text */
+  font-size: 0.85rem;
+  margin-top: 0.5rem; /* Reduced margin-top for compactness */
+  margin-bottom: 0; /* Ensure no extra space below */
+}
+
+/* Dark Mode Footer Adjustments */
+body.dark-mode .footer-dark {
+    color: white; /* Ensures text is visible in dark mode */
+}
+
+body.dark-mode .footer-dark::before {
+    background: rgba(0, 0, 0, 0.8); /* Slightly darker overlay in dark mode */
+}
+
+body.dark-mode .footer-text,
+body.dark-mode .footer-link,
+body.dark-mode .contact-item,
+body.dark-mode .footer-copyright {
+    color: white !important; /* Ensure all text is bright white in dark mode footer */
+}
+
+body.dark-mode .footer-form .form-control {
+    background-color: rgba(255, 255, 255, 0.05); /* Lighter background for input in dark mode */
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--footer-text-color);
+}
+
+body.dark-mode .footer-form .form-control::placeholder {
+    color: var(--footer-text-color);
+}
+
+body.dark-mode .footer-form .btn-primary {
+    background-color: var(--footer-link-hover-color);
+    border-color: var(--footer-link-hover-color);
+    color: var(--text-main); /* Ensure text is dark on bright button */
+}
+
+body.dark-mode .footer-form .btn-primary:hover {
+    background-color: lighten(var(--footer-link-hover-color), 10%); /* Lighter on hover in dark mode */
+    border-color: lighten(var(--footer-link-hover-color), 10%);
+}
